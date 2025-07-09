@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nova | Skincare</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./ASSETS/CSS/style.css" />
+</head>
+
+<body>
+  <!-- Fixed Header: Topbar + Navbar -->
+  <div class="header-fixed">
+    <!-- Topbar -->
+    <div class="topbar text-center fw-semibold text-dark">
+      <span id="topbar-text">Experience glowing skin with Nova.</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-1" id="mainNavbar">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <!-- Left: Empty or future menu -->
+        <div class="d-none d-lg-flex" style="width: 33%;"></div>
+
+        <!-- Center: Logo -->
+        <a class="navbar-brand fw-bold mx-auto" href="index.html">
+          <img src="./ASSETS/IMAGES/brandLogo.png" alt="Nova Logo" style="height: 80px;" />
+        </a>
+
+        <!-- Icons & Search Section -->
+        <div class="d-flex align-items-center gap-4 justify-content-end">
+
+          <!--  Search Block -->
+          <div class="search-block d-flex align-items-center">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="styled-search" placeholder="Search products..." />
+          </div>
+
+          <!--  Profile -->
+          <div class="text-center icon-wrapper">
+            <a href="./loginPage.html" class="text-dark text-decoration-none">
+              <i class="bi bi-person fs-5"></i>
+              <small>Profile</small>
+            </a>
+          </div>
+
+          <!--  Wishlist -->
+          <div class="text-center icon-wrapper">
+            <a href="./wishlist.html" class="text-dark text-decoration-none">
+              <i class="bi bi-heart fs-5"></i>
+              <small>Wishlist</small>
+            </a>
+          </div>
+
+          <!-- Cart with count badge -->
+          <div class="text-center icon-wrapper position-relative">
+            <a href="javascript:void(0);" onclick="openCart()" class="text-dark text-decoration-none position-relative">
+              <i class="bi bi-bag fs-5" onclick="toggleCart()" style="cursor:pointer;"></i>
+              <span class="cart-count" id="cartCount">0</span>
+              <small>Cart</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav py-3">
+      <div class="container text-center">
+        <ul class="nav justify-content-center flex-wrap gap-1">
+          <li class="nav-item"><a class="nav-link" href="#">FACE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">BATH & BODY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HAIR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MAKEUP</a></li>
+          <li class="nav-item position-relative">
+            <a class="nav-link" href="#">GIFTING</a>
+            <span class="badge-new">NEW</span>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">MOM & BABY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">WELLNESS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FRAGRANCE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">EXCLUSIVES!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="container py-4">
+    <div class="row" id="productList">
+      <!-- Products will be injected here -->
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+<div id="cartDrawer" class="position-fixed top-0 end-0 shadow p-3"
+  style="width: 400px; height: 100vh; z-index: 1050; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s; background-color: #fdfdfd;">
+  
+  <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+    <h5 class="fw-semibold">Shopping Bag</h5>
+    <button onclick="toggleCart()" class="btn-close"></button>
+  </div>
+
+  <!-- Cart Items Section -->
+  <div id="cartItems"></div>
+
+  <!-- Empty Cart Message -->
+  <div id="emptyCart" class="text-center py-5" style="display: none;">
+    <img src="./ASSETS/IMAGES/Addtocart.png" alt="Empty Cart" style="max-width: 180px;" class="mb-3">
+    <h5>Oops! Your bag is empty!</h5>
+    <p>Start adding products now.</p>
+    <button class="btn btn-dark my-3" onclick="window.location.href='wishlist.html'">ADD ITEM FROM WISHLIST</button>
+    <div>
+      <a href="index.html" class="text-decoration-none fw-semibold" style="color:#d8b36a;">CONTINUE SHOPPING</a>
+    </div>
+  </div>
+
+  <!-- Order Summary Section -->
+  <div id="cartTotalWrapper" class="border-top mt-3 pt-3">
+    <div class="d-flex justify-content-between mb-2">
+      <span class="fw-semibold">TOTAL</span>
+      <span class="fw-semibold">₹<span id="cartTotal">0</span></span>
+    </div>
+    <button class="btn btn-dark w-100 mt-3" onclick="goToCheckout()">CHECKOUT</button>
+  </div>
+</div>
+
+
+  <!-- Banner Slider -->
+  <div class="slider mt-5 pt-5" id="slider">
+    <img src="./ASSETS/IMAGES/banner1.jpg" alt="Slide 1" class="active" />
+    <img src="ASSETS/IMAGES/banner4.jpg" alt="Slide 2" />
+    <img src="ASSETS/IMAGES/banner2.jpeg" alt="Slide 3" />
+    <!-- <img src="ASSETS/IMAGES/banner6.jpg" alt="Slide 4" />
+    <img src="ASSETS/IMAGES/banner7.jpg" alt="Slide 5" />
+    <img src="ASSETS/IMAGES/banner2.jpg" alt="Slide 5" />
+    <img src="ASSETS/IMAGES/banner3.jpg" alt="Slide 5" />
+    <img src="ASSETS/IMAGES/banner.jpeg" alt="Slide 5" /> -->
+  </div>
+
+  <!-- Mini Category Section -->
+
+  <!-- Mini Category Slider Section -->
+  <section class="container-fluid my-5 pt-1">
+    <p class="text-center mb-2">Truth starts here</p>
+    <h4 class="text-center mb-4">Shop By Ingredients</h4>
+
+    <div class="category-slider-wrapper">
+      <div class="category-slider-track">
+        <div class="category-slider">
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini1.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini2.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini3.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini4.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini5.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini6.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini7.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini8.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini9.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini10.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini11.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini12.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini13.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini14.png" alt=""></div>
+          <div class="cat-card"><img src="./ASSETS/IMAGES/mini15.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About-Page -->
+
+  <section class="hero-section py-5">
+    <p class="text-center mb-2">Inspired by the Himalayas</p>
+    <h4 class="text-center mb-4">About Us</h4>
+    <div class="container mt-3">
+      <div class="row align-items-center gy-4">
+        <!-- Left Side: Image -->
+        <div class="col-md-6">
+          <img src="./ASSETS/IMAGES/about.webp" class="img-fluid rounded shadow" alt="SoulTree Product" />
+        </div>
+
+        <!-- Right Side: Content -->
+        <div class="col-md-6 ps-md-5">
+          <h3 class="fw-semibold lh-base">
+            Inspired by the Himalayas.<br />
+            Enriched with honest ingredients.<br />
+            Crafted the Ayurvedic way.
+          </h3>
+          <p class="text-muted fs-6 mt-4 content">
+            In a world full of beauty quick fixes and chemically aided makeovers, choose the path of nurture with
+            nature.
+            From soil to shelf, and from skin to soul, every product from <strong>SoulTree</strong> is a tribute to
+            purity and purpose. We believe in sustainability, transparency, and a circular approach to wellness—known as
+            the Circle of Goodness.
+          </p>
+          <a href="about.html" class="btn btn-custom mt-4">MORE ABOUT US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ADD to CArd -->
+
+  <section class="container my-5">
+    <p class="text-center mb-1">In the Spotlight</p>
+    <h4 class="text-center mb-4">Our Bestsellers</h4>
+    <div class="row justify-content-center gy-4">
+
+      <div id="product-container"></div>
+      <div class="container py-5">
+        <div class="row" id="productList">
+          <!-- Cards will appear here -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Feature Icons Section -->
+  <section class="features-section py-1">
+    <div class="container">
+      <div class="row text-center align-items-center justify-content-center feature-row">
+        <div class="col-md-3 col-6 feature-item">
+          <img src="./ASSETS/IMAGES/icon-1.png" alt="Fragrance" class="feature-icon" />
+          <p>No Synthetic<br>Fragrance</p>
+        </div>
+        <div class="col-md-3 col-6 feature-item border-start border-end">
+          <img src="./ASSETS/IMAGES/icon-2.webp" alt="Cruelty Free" class="feature-icon" />
+          <p>Cruelty free & 100%<br>vegetarian</p>
+        </div>
+        <div class="col-md-3 col-6 feature-item border-end mt-md-0 mt-4">
+          <img src="./ASSETS/IMAGES/icon-3.webp" alt="Sustainable" class="feature-icon" />
+          <p>Sustainably<br>Sourced Ingredients</p>
+        </div>
+        <div class="col-md-3 col-6 feature-item mt-md-0 mt-4">
+          <img src="./ASSETS/IMAGES/icon-4.png" alt="SLS Free" class="feature-icon" />
+          <p>SLS/SLES Free and<br>Paraben Free</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Footer Section -->
+
+  <footer class="nova-footer-modern">
+    <div class="container-fluid text-center py-5">
+
+      <!-- Newsletter Signup -->
+      <h5 class="fw-semibold mb-3">sign up for updates:</h5>
+      <form class="footer-form d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-3">
+        <input type="email" class="form-control" placeholder="email address" required>
+        <button type="submit" class="btn btn-outline-dark">submit</button>
+      </form>
+      <p class="small text-muted">by signing up you agree to our <a href="#">terms</a>.</p>
+
+      <!-- Social Icons -->
+      <div class="footer-icons my-4">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+      <!-- Mid Footer Links -->
+      <div class="footer-links mb-3">
+        <a href="#">contact us</a>
+        <a href="#">faq</a>
+        <a href="#">shipping</a>
+        <a href="#">order tracking</a>
+        <a href="#">gift card balance</a>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="footer-legal-links mb-3">
+        <a href="#">privacy policy</a>
+        <a href="#">terms</a>
+        <a href="#">accessibility</a>
+        <a href="#">set my cookie choices</a>
+        <a href="#">cookie policy</a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="small text-muted mb-0">&copy; 2025 Nova Skincare</p>
+    </div>
+
+    <!-- Scroll to top -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      <i class="bi bi-chevron-up"></i>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./ASSETS/JS/script.js"></script>
+  <script src="./ASSETS/JS/cart.js"></script>
+</body>
+
+</html>

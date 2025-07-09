@@ -1,0 +1,125 @@
+{
+  "products": [
+    {
+      "name": "peach sun",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/KJC_SPRINGCOL_DBS_25_PeachSun_Stylized_4f00c69f-1486-4af7-9959-c250da9c45f3.jpg?v=1748877486",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/KJC_SPRINGCOL_DBS_25_PeachSun_PP_Swatch_d6c7408b-cca4-41b9-9f58-193f61cb24b4.jpg?crop=center&height=600&v=1748877485&width=600",
+      "price": 4600,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "pink ice",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/KJC_SPRINGCOL_SKLG_25_PinkIce_Stylized_3e48a961-343d-4a2f-9ea7-d9815336138e.jpg?v=1748879197",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/KJC_SPRINGCOL_SKLG_25_PinkIce_PP_Swatch_a048e99f-e2ac-42e2-b9a6-0bc4d4675c0f.jpg?crop=center&height=600&v=1748879197&width=600",
+      "price": 2500,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "lunar sky",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/KJC_SPRINGCOL_DBS_25_LunarSky_Stylized_6c37c315-e6d1-46ec-98b4-81a3cbaab995.jpg?v=1748877486",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/KJC_SPRINGCOL_DBS_25_LunarSky_PP_Swatch_bb1f591c-dafb-4560-860b-af94bcea0b0c.jpg?crop=center&height=600&v=1748877486&width=600",
+      "price": 2500,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "sunburst",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/KJC_SPRINGCOL_SKLG_25_Sunburst_Stylized_e94427dd-7aed-4e7f-a3a8-0f162aa3cd14.jpg?v=1748879197",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/KJC_SPRINGCOL_SKLG_25_Sunburst_PP_Swatch_31b44784-b078-4ae3-96eb-99bc4edc2572.jpg?crop=center&height=600&v=1748879197&width=600",
+      "price": 1900,
+      "oldPrice": 2500,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+     {
+      "name": "Glossy Lip Kit & Hybrid Blush Duo",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/v1a_Glossy-Lip-Kit_Bundle_1_f9099d4f-1d42-441c-8a53-af2b2a749b0f.jpg?v=1750692857",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/v1_Glossy-Lip-Kit_Bundle_swatches_82e04306-90a7-4674-a29e-1e6745d75ccc.jpg?crop=center&height=600&v=1750692857&width=600",
+      "price": 4600,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "Cosmic 2.0 Summer Makeup",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/v1_Cosmic-2.0-Summer-Collection_Bundle_2_03a2fb89-fa57-41c8-9255-1a7b3c80a119.jpg?v=1748877526",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/v1a_Cosmic-2.0-Summer-Collection_Bundle_swatches_WSQ_8a3a63c6-5f9f-4e0b-a169-53a5c8ed8861.jpg?crop=center&height=600&v=1748877526&width=600",
+      "price": 1760,
+      "oldPrice": 1950,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "full collection"
+    },
+    {
+      "name": "winter kissed 2.0",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/KJC_HB_25_WinterKissed20_Stylized.jpg?v=1747339652",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/KJC_HB_25_WinterKissed20_PP_Swatch.jpg?crop=center&height=600&v=1747339652&width=600",
+      "price": 2500,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "Glossy Lip Kit & Sugar Lip Scrub Duo",
+      "image": "https://cdn.shopify.com/s/files/1/0662/4598/4498/files/v3_Glossy-Lip-Kit_Bundle_1_c0bbb757-9593-4f88-807f-0453d7f6dc3c.jpg?v=1750693316",
+      "hoverImage": "https://kyliecosmetics.com/cdn/shop/files/v1_Glossy-Lip-Kit_Bundle_swatches_0320877b-fc0c-4f26-bedc-c1334a3f18a5.jpg?crop=center&height=600&v=1750693316&width=600",
+      "price": 4500,
+      "oldPrice": 5100,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "new"
+    },
+    {
+      "name": "Hair Thickening Spray Bhringraj",
+      "image": "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/0ee050c3ffc3555709b9bb6062f4d7e9/9/7/9728_hair_thickening_spray_bhringraj___shikakai_130ml_1.png",
+      "hoverImage": "https://img.forestessentialsindia.com/pub/media/catalog/9728_Hair_Thickening_Spray_Bhringraj___Shikakai.jpg",
+      "price": 2150,
+      "oldPrice": 2600,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "Best Seller"
+    },
+    {
+      "name": "Bhringraj Ayurvedic Head Massage Oil",
+      "image": "https://img.forestessentialsindia.com/pub/media/catalog/9726_Ayurvedic_Herb_Enriched_Head_Massage_Oil_Bhringraj_200ml_9.jpg",
+      "hoverImage": "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/0ee050c3ffc3555709b9bb6062f4d7e9/9/7/9726_ayurvedic_herb_enriched_head_massage_oil_bhringraj_200ml_1.png",
+      "price": 1850,
+      "oldPrice": 2000,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "Best Seller"
+    },
+    {
+      "name": "Advanced Hair Growth Serum",
+      "image": "https://img.forestessentialsindia.com/pub/media/catalog/21324_Keshanta_Advanced_Hair_Growth_Serum.jpg",
+      "hoverImage": "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/0ee050c3ffc3555709b9bb6062f4d7e9/2/1/21324_keshanta_advanced_hair_growth_serum_50ml_1_1.png",
+      "price": 3150,
+      "oldPrice": 3800,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "Tranding Now"
+    },
+    {
+      "name": "pink ice",
+      "image": "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/0ee050c3ffc3555709b9bb6062f4d7e9/9/7/9749_travel_size_hair_conditioner_amla_honey___mulethi_50ml_1.png",
+      "hoverImage": "https://img.forestessentialsindia.com/pub/media/catalog/9749_Hair_Conditioner_Amla_Honey_Mulethi.jpg",
+      "price": 575,
+      "oldPrice": 900,
+      "rating": 4.5,
+      "reviews": 120,
+      "badge": "Little Luxuries"
+    } 
+      
+  ]
+}
