@@ -7,7 +7,7 @@ This project is a responsive, front-end e-commerce website for skincare products
 
 ## 🌐 Live Demo
 
-[Click here to view the live site](https://your-deployment-link.com)
+[Click here to view the live site](https://project-js-add-to-cart.vercel.app/)
 
 
 ---
@@ -62,9 +62,12 @@ PROJECT-JS_AddToCart/
 ![Footer Page](<Screenshot 2025-07-09 173946.png>)
 ![Login page](<Screenshot 2025-07-09 174003.png>)
 ![Cart Page](<Screenshot 2025-07-09 174030.png>)
-![CheckOut page](<Screenshot 2025-07-09 174051.png>)
-![CheckOut page](<Screenshot 2025-07-09 174114.png>)
-![CheckOut SubmitMsg](<Screenshot 2025-07-09 174206.png>)
+![CheckOut page](<![Screenshot 2025-07-09 174051](https://github.com/user-attachments/assets/cfab04e0-d7d5-4499-a538-dcd900c3b0f0)
+>)
+![CheckOut page](<![Screenshot 2025-07-09 174114](https://github.com/user-attachments/assets/f74c6165-d23b-4d89-9857-a9c7f4ae899f)
+>)
+![CheckOut SubmitMsg](<![Screenshot 2025-07-09 174206](https://github.com/user-attachments/assets/5bf0c5c4-c4ca-449d-9664-17494f26fe07)
+>)
 ---
 
 ## 📚 Tech Stack
